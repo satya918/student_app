@@ -17,6 +17,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
+                    sh 'docker build -t reg:reg .'
                     def dockerImage = docker.build('registration:reg', '-f Dockerfile .')
                 }
             }
