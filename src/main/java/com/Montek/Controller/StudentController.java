@@ -32,7 +32,7 @@ public class StudentController {
 	
 	@RequestMapping("/Start")
 	public String startapp() {
-		return "login1";
+		return "login1.jsp";
 	}
 	
 	@RequestMapping("/login")
@@ -44,10 +44,10 @@ public class StudentController {
 	    Login regd = logrepo.findByEmail(email);
 	    if (regd != null && regd.getEmail().equals(email) && regd.getPassword().equals(password)) {
 	        model.addAttribute("msg", "WELCOME TO LDTECH REGISTRATION PORTAL");
-	        return "reg";
+	        return "reg.jsp";
 	    } else {
 	        model.addAttribute("msg", "Invalid username or password");
-	        return "login1";
+	        return "login1.jsp";
 	    }
 	}
 
@@ -56,7 +56,7 @@ public class StudentController {
 	
 	@RequestMapping("/signup")
 	public String fillform() {
-		return "open";
+		return "open.jsp";
 	}
 	
 	@RequestMapping("/saveone")
