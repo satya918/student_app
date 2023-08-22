@@ -16,7 +16,7 @@ pipeline{
                         } 
     stage ('Deploy to tomcat server'){
                         steps{
-                deploy adapters: [tomcat9(credentialsId: 'tomcatcreds', path: '', url: 'http://13.51.108.55:9092/')], contextPath: '', war: '**/*.war'
+                deploy adapters: [tomcat9(credentialsId: 'tomcatcreds', path: '', url: 'http://13.51.108.55:9092/')], contextPath: 'Montek', war: '**/*.war'
             }
         }
     }
